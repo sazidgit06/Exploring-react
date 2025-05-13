@@ -2,6 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import './Todo'
+import Todo from './Todo'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +24,9 @@ function App() {
       <Bike milage = "45km" cc ="300"></Bike>
       <Bike></Bike>
       <Bike milage = "45km" cc ="300"></Bike>
+      <Todo task="Component" isdone={true}></Todo>
+      <Todo task="Destructurung" isdone={false}></Todo>
+      <Todo task="import/export" isdone={true}></Todo>
     </>
   )
 }
