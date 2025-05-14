@@ -4,9 +4,28 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import './Todo'
 import Todo from './Todo'
+import Actor from './Actor'
+import Singer from './Singer'
+import BookStore from './BookStore'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const actors = ["Salman shah", "Manna", "Bapparaj", "Maruf"];
+
+  const singers = [
+    {name: "Dr Mahfuzur", age: 68},
+    {name: "Hero Alom", age: 38},
+    {name: "Asif", age: 48},
+    {name: "Kona", age: 28},
+  ]
+
+  const books = [
+    {id:1, name: "Physics", score: 90},
+    {id:1, name: "Chemistry", score: 94},
+    {id:1, name: "Biology", score: 93},
+    {id:1, name: "Math", score: 92},
+  ]
 
   return (
     <>
@@ -20,13 +39,28 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <Person></Person>
+
       <Car name="Rolse Royce" price="6cr"></Car>
+
       <Bike milage = "45km" cc ="300"></Bike>
-      <Bike></Bike>
-      <Bike milage = "45km" cc ="300"></Bike>
+
       <Todo task="Component" isdone={true}></Todo>
       <Todo task="conditional rendering" isdone={false}></Todo>
       <Todo task="import/export" isdone={true}></Todo>
+
+      <Actor name={"Shakib khan"}></Actor>
+      {
+        actors.map(actor => <Actor name = {actor}></Actor>)
+      }
+
+      {
+        singers.map(singer => <Singer singer = {singer}></Singer>)
+      }
+      
+      {/* {
+        books.map(book => <BookStore books = {book}></BookStore>)
+      } */}
+      <BookStore books = {books}></BookStore>
     </>
   )
 }
@@ -64,7 +98,8 @@ function Bike({milage, cc}){
   const bikestyle = {
     border : "2px solid yellow",
     borderRadius : "10px",
-    padding : "10px"
+    padding : "10px",
+    marginBottom : "20px"
   }
   return (
     <div style={bikestyle}>

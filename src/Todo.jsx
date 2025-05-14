@@ -39,7 +39,11 @@ export default function Todo({ task, isdone }) {
     // )
 
     // consditonal rendering way 6
-
+    const todoStyle = {
+        border : "2px solid olive",
+        padding : "10px",
+        borderRadius : "10px",
+    }
     let listitem;
     if(isdone){
         listitem = <li>{task} : ✅</li>
@@ -47,6 +51,5 @@ export default function Todo({ task, isdone }) {
     else{
         listitem = <li>{task} : ❌</li>
     }
-    return listitem;
-
+    return <div style={todoStyle}>{listitem}</div>;
 }
