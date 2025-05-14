@@ -25,7 +25,7 @@ function App() {
       <Bike></Bike>
       <Bike milage = "45km" cc ="300"></Bike>
       <Todo task="Component" isdone={true}></Todo>
-      <Todo task="Destructurung" isdone={false}></Todo>
+      <Todo task="conditional rendering" isdone={false}></Todo>
       <Todo task="import/export" isdone={true}></Todo>
     </>
   )
